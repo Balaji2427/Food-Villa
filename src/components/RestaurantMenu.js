@@ -29,7 +29,7 @@ const RestaurantMenu = () => {
           <h2 className="text-4xl font-bold mb-5">{restaurant?.name}</h2>
           <h2 className="text-md">{restaurant?.costForTwoMessage}</h2>
           {/* <h2>{restaurant?.cuisines.join(", ")}</h2> */}
-          <h2 className="text-md mb-2">{restaurant?.avgRatingString} stars</h2>
+          <h2 className="text-md mb-2">{restaurant?.avgRatingString}</h2>
           <h3 className="text-lg text-gray-800">{restaurant?.areaName}</h3>
           <h4 className="text-xl font-bold text-gray-800">
             {restaurant?.city}
