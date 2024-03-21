@@ -16,22 +16,31 @@ const RestaurantMenu = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center">
-      <div className="flex bg-amber-300 justify-center items-center p-5">
+    <div className="flex flex-col justify-center items-center mt-[88px]">
+      <div className="flex bg-amber-300 justify-center items-center p-1 md:p-5 w-[100%]">
         <div className="">
           <img
-            className="w-[20%] mx-10 my-5 rounded-lg"
+            className="w-[40%] md:w-[20%] mx-10 my-5 rounded-lg"
             src={IMG_CDN_URL + restaurant?.cloudinaryImageId}
             alt="res-img"
           />
         </div>
-        <div className="mr-32">
-          <h2 className="text-4xl font-bold mb-5">{restaurant?.name}</h2>
-          <h2 className="text-md">{restaurant?.costForTwoMessage}</h2>
-          {/* <h2>{restaurant?.cuisines.join(", ")}</h2> */}
-          <h2 className="text-md mb-2">{restaurant?.avgRatingString}</h2>
+        <div className="mr-10 md:mr-32">
+          <h2 className="text-sm md:text-4xl font-bold mb-5 mt-5">
+            {restaurant?.name}
+          </h2>
+          <h2 className="text-sm md:text-lg">
+            {restaurant?.costForTwoMessage}
+          </h2>
+          <h2 className="text-sm md:text-lg text-fuchsia-800">
+            {restaurant?.cuisines?.join(", ")}
+          </h2>
+          <h2 className="text-sm md:text-md mb-2">
+            {restaurant?.avgRatingString}
+          </h2>
+          {/* <h2 className="text-md mb-2">{restaurant?.locality}</h2> */}
           <h3 className="text-lg text-gray-800">{restaurant?.areaName}</h3>
-          <h4 className="text-xl font-bold text-gray-800">
+          <h4 className="text-lg md:text-xl font-bold text-gray-800 mb-5">
             {restaurant?.city}
           </h4>
         </div>
@@ -43,12 +52,12 @@ const RestaurantMenu = () => {
             <li key={item?.card?.info?.id} className="flex items-center py-8">
               <div>
                 <img
-                  className="w-32 rounded-lg mr-48"
+                  className="w-36 h-32 md:w-32 rounded-lg mr-20 md:mr-48 ml-10"
                   src={IMG_CDN_URL + item?.card?.info?.imageId}
                 />
               </div>
               <div className="flex flex-col">
-                <h1 className="text-lg font-bold pb-2">
+                <h1 className="text-md md:text-xl font-bold pb-2">
                   {item?.card?.info?.name}
                 </h1>
                 <button
